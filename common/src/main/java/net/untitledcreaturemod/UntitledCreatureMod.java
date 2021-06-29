@@ -1,5 +1,6 @@
 package net.untitledcreaturemod;
 
+import com.google.common.collect.PeekingIterator;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -43,6 +44,8 @@ public class UntitledCreatureMod {
 
         BiomeModifications.addProperties((bc) -> Toad.SPAWN_BIOMES.contains(bc.getKey()),
                 (bc, mod) -> mod.getSpawnProperties().addSpawn(SpawnGroup.CREATURE, Toad.SPAWN_ENTRY.get()));
+        BiomeModifications.addProperties((bc) -> Pelican.SPAWN_BIOMES.contains(bc.getKey()),
+                (bc, mod) -> mod.getSpawnProperties().addSpawn(SpawnGroup.CREATURE, Pelican.SPAWN_ENTRY.get()));
         EntityAttributes.register(Toad.TOAD::get, ToadEntity::getDefaultAttributes);
         EntityAttributes.register(Pelican.PELICAN::get, PelicanEntity::getDefaultAttributes);
     }

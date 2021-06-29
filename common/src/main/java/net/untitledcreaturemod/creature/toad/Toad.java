@@ -29,6 +29,7 @@ public class Toad {
             () -> EntityType.Builder.create(ToadEntity::new, SpawnGroup.CREATURE)
                     .setDimensions(.8f, .5f)
                     .build("toad"));
+    public static final float SWIM_SPEED = 3.0f;
 
     public static final RegistrySupplier<Item>SPAWN_EGG = ITEMS.register("toad_spawn_egg",
             () -> new ModSpawnEggItem(TOAD::get, 0x363e0a,0xdfd66b, new Item.Settings().group(CREATIVE_TAB)));
